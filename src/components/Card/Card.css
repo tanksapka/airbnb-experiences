@@ -1,0 +1,48 @@
+.card {
+  width: 11em;
+  margin: 2em;
+}
+
+.card-img {
+  max-height: 15em;
+  max-width: 11em;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  color: #222222;
+  font-size: 0.75rem;
+  line-height: 1.8em;
+}
+
+.description p {
+  margin: 0;
+}
+
+.rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: lighter;
+}
+
+.rating img {
+  height: 1em;
+}
+
+.rating p {
+  margin: 0 0 0 0.5em;
+}
+
+.rating p span {
+  color: #918e9b;
+}
+
+.price {
+  margin: 0;
+}
+
+.price span {
+  font-weight: 600;
+}
