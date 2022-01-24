@@ -1,16 +1,28 @@
 import "./Card.css";
 
 export default function Card(props) {
+  let badgeText;
+  if (props.openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (props.location === "Online") {
+    badgeText = "ONLINE";
+  }
+
   return (
     <div className="card">
-      <img className="card-img" src={"./" + props.img} alt={props.img.replace(".png", "").replace("_", " ")} />
+      {badgeText && <div className="card-badge">{badgeText}</div>}
+      <img
+        className="card-img"
+        src={`./images/${props.coverImg}`}
+        alt={props.coverImg.replace(".png", "").replace("_", " ")}
+      />
       <section className="description">
         <div className="rating">
           <img src="./star.png" alt="Star icon" />
           <p>
-            {props.rating}{" "}
+            {props.stats.rating}{" "}
             <span>
-              ({props.reviewCount}) • {props.country}
+              ({props.stats.reviewCount}) • {props.location}
             </span>
           </p>
         </div>

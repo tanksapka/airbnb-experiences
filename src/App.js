@@ -2,20 +2,31 @@ import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Card from "./components/Card/Card";
+import "./App.css";
+import dataArray from "./data";
 
 export default function App() {
+  const cards = dataArray.map((item) => {
+    return (
+      <Card
+        key={item.id}
+        {...item}
+        // img={`./images/${item.coverImg}`}
+        // rating={item.stats.rating}
+        // reviewCount={item.stats.reviewCount}
+        // location={item.location}
+        // title={item.title}
+        // price={item.price}
+        // openSpots={item.openSpots}
+      />
+    );
+  });
+
   return (
     <div className="container">
       <Navbar />
       <Hero />
-      <Card
-        img="katie_zaferes.png"
-        rating="5.0"
-        reviewCount={6}
-        country="USA"
-        title="Life Lessons with Katie Zaferes"
-        price={136}
-      />
+      <section className="card-list">{cards}</section>
     </div>
   );
 }

@@ -1,0 +1,5 @@
+.card-list {
+  margin: 0 2em;
+  display: flex;
+  overflow-x: auto;
+}

@@ -2,7 +2,7 @@ import "./Hero.css";
 
 export default function Hero() {
   return (
-    <section>
+    <section className="hero">
       <img className="photo-grid" src="./photo-grid.png" alt="Experience photos" />
       <div className="hero-text">
         <h1>Online Experiences</h1>
